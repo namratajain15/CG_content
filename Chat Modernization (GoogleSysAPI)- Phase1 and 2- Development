@@ -1,0 +1,175 @@
+	1. SO chat replaced with Google quantiphi model (CCaaS) i.e related to AI  
+	-> 1st step - token generation
+	-> then lot of APIs change
+
+Phase 1 - 
+
+Consumer - CSS ,   Provider - Google
+-> api-np host and in FI org 
+->  take reference from ClaimsCenter GoogleSysAPI-V1.
+
+Phase 2 : 
+
+	1. AgentAPI-V2  -> start to  
+	2. ChatAPI-V2 -
+	- Need to remove the code from claims team?
+	- CAAS changes are pending, exactly same can replicate from SFSRMChatservice to CahtAPI-V2
+	- And where to add CAAS for Chatapi-v2
+-> ask Ranit 
+	- Json request transofrmation and response transofrmation needed
+	- Finalized the request and response transofrmation then will do the changes
+	
+
+ServiceRequestAPI-V2
+
+Doubts to Ranit - 
+
+	Branch from which tag - prod or non prod and in 4.6 or 4.9
+	Mapping sheet - 
+	- Both sheets are different..having more fields in new sheet shared by sourav. - done
+	- Json payload will consider it as an array and loop it ..not fixed position correct?
+	- Path written in which way? 
+	- Accountid is there in json payload also , so from where we need to fetch either payload or from SRM query?
+	- Assetid , policy number confusion, will they send in payload?
+	
+
+Not able to figure out for -  Insured_Name__c, Owner_ID, Verified_Agency__c, Verified_Name_Agency_Contact__c , Verified_Name_Customer__c
+
+Extra - Business_Relationship__c , CC_Other_Question__c , Location__c, Original_Department_Assigned__c , SC_Producer_Type__c and last all in sheet
+
+	
+
+
+
+ChatAPI-V2 -
+
+And even got failed giving 200 ok only in case of both , see live for historical
+
+And which contract need to add?
+
+	Queries - 
+	1. SOQL queries count ?
+	2. Verified - 3 fields required 2 more SOQL.. As of now not putting these vriables
+	3. Upsert - ExternalID?  - caseNumber
+	
+		1. External_Id getting from firsl SOQL query - but getting two
+		2. If I consider PNI External_ID then I need the ID of that asset having that External_ID
+	
+	4. What should we do default ' ' or if condition to check null in request transformation? - ask ranit
+	5. frms_brand  = ??  Pass in headers or fetch from SOQL? And what value ?
+
+	6. WTC - 
+	- Exaclty which mapping I need to skip in case of this field
+	
+
+Task : 
+-> ExternalID
+-> verified 3 fields mapping
+-> WTC final fields
+-> add CAAS variables - origin and frmssource and check more
+-> error transformation if require, decide after test giving wrong config for salesforce
+
+
+
+SRM team doubt -  imp
+	1. Payload of upsert looks like ?  - will not consider array and if 2 records then which record it will take value or both confirm?
+	2. WTC final fields
+	3. ExternalID
+	
+
+Is_verified =  by default 'false', if contact not found while quering with the request payload
+-> if agency record and customerrecord found then alwys send as TRUE else false
+Contacttype_c change
+Is_active c for contact
+Active records check for asset and contacts 
+
+
+
+Ranit - 
+ServiceRequest-
+-> response body for updateCase .. CCaaS asking for that
+-> error transformation - what would be the function_c?
+
+Frms_headers value
+Upsert - externalID failing and until 3 retry need to put? 
+In case of failure from SRM we get - choice what error transformation ..what to do ?
+Isverified and externid pending  at SRM end
+
+ChataPI-
+	1. Async flow only for historic flow?
+	2. Nicesystemapi - payload for Q.xml  not contains 2 fields and need to remove other fields?
+
+SRM - 
+	1. Left over mappings pending
+
+Task - 
+	1. Ask Ranit about GogleSysAPI prod plan
+	2. Servicerequest - raml change and 6 7 field mapping add
+	3. Testing for ChatAPI-V2
+	4. Prepare prod tracker and KT meet  and check for qa signoff
+	5. Prepare DCAAS config
+
+ServiceRequestAPI- 
+	1. Producer/agentcode change if asset willl be blank throwing erro at contact query
+	2. MA11 is not working, check 
+	3. SR number logic add
+	4. raml change and 6 7 field mapping add
+	
+
+Querires - 
+	1. caseUpdate or not if we will not found any records from assetpartyquery or agentrecords ?
+	2. PNI needs to check or not for assetparty records .. As of now only check active records by enddate and matching inititairs name as  customer.
+	3. If policy not found means what assetparty query records nto found after filtering or matching?
+	4. Upsert will fine right?
+
+DCAAS - 
+Ranit -  satish asked to take your confirmation first 
+And EPC PC PERF failing fully but other orgs running fine
+
+	1. Account query will run in which scenario - only agent or both customer and agent?
+	2. 2 new fields are still pending given in last mail .
+
+	1. AOR will go I W2C policy number field?
+	2. Category of loggers
+	3. Bi brand only
+	4. Check sc_agency name
+
+	1. ProducerCode precedence for contact query and in soql add this
+	2. Quatation scenario change - quotenumber in soql and add request transforamtion update
+	3. Location change - add
+	4. Most imp - check if agent type then run asset query also on basis of policy number if AOR is not there.
+
+Kalyan - 
+	1. Producer_code regex
+	2. Agent-Mismatch - match the agencyname from Account query against agencyName from asset query ..if not match then agent-mismatch else agent - but didn’t get any confirmation
+
+	1. If we don’t get caseId in payload ..just send the error back that case id is missing and skip the whole logic. - validation we can do
+	2. Implement the logic - what suman asked
+	3. And error response also contains SR number(case number)
+	
+
+	Flow level change -
+	1. Put CaseId Validation
+	2. Send SRNumber also in Error response
+	
+
+Agent Flow ->
+
+
+	1. Change the ContactQuery by removing the firstName and lastName condition
+	2. If we don’t get any records, only update the W2cPolicyNumber with AOR
+	3. IF we get the records - compare firstName and Last Name with payload now and if match then update the following mappings - 
+	->  isverified - true , VerifiedAgency -> accountID , Verfied Contact -> Id
+	4. If we get policy Number in payload, then need to run AssetPartyQuery and compare AgencyName (from contactQuery) with AgencyName (from AssetPartyQuery) 
+	- if not match  then  'Agent Mismatch'
+	- Else check  Is_Active and Record_Status - If true then 'Agent'
+							        -  else 'Inactive Agent'          
+	
+	
+	
+
+Contact query ,
+insuredName
+accountquery
+
+	1. 
