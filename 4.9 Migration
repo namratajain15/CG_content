@@ -1,0 +1,15 @@
+1. mule-sockets-connector - upgrade to 1.2.7
+
+2. <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-compiler-plugin</artifactId>
+   <version>3.14.0</version>
+    <configuration>
+                 <compilerArgs>
+     <args>-parameters</args>
+      </compilerArgs>
+      <target>17</target>
+     </configuration>
+</plugin>
+
+3. Mule java module - 2.0.2  - 1.2.14(working in local)
