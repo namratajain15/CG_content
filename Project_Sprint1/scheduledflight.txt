@@ -1,0 +1,291 @@
+REQUEST
+-----------------------------
+{
+  "availableSeats": 180,
+  "flight": {
+    "carrierName": "AirGo",
+    "flightModel": "AGI",
+    "flightNumber": 10004,
+    "seatCapacity": 200
+  },
+  "schedule": {
+    "arrivalTime": "2022-10-30 16:10:00",
+    "departureTime": "2022-10-30 14:00:00",
+    "destinationAirport": {
+      "airportCode": "102",
+      "airportLocation": "Mumbai",
+      "airportName": "Chhatrapati Shivaji International Airport"
+    },
+    "sid": 0,
+    "sourceAirport": {
+      "airportCode": "101",
+      "airportLocation": "Delhi",
+      "airportName": "Indira Gandhi International Airport"
+    }
+  },
+  "sfid": 0
+}
+
+----------------------------------------------------------------------------------
+
+{
+  "availableSeats": 180,
+  "flight": {
+    "carrierName": "GoFirst",
+    "flightModel": "GFI",
+    "flightNumber": 10005,
+    "seatCapacity": 180
+  },
+  "schedule": {
+    "arrivalTime": "2022-10-30 11:15:00",
+    "departureTime": "2022-10-30 09:00:00",
+    "destinationAirport": {
+      "airportCode": "102",
+      "airportLocation": "Mumbai",
+      "airportName": "Chhatrapati Shivaji International Airport"
+    },
+    "sid": 0,
+    "sourceAirport": {
+      "airportCode": "101",
+      "airportLocation": "Delhi",
+      "airportName": "Indira Gandhi International Airport"
+    }
+  },
+  "sfid": 0
+}
+----------------------------------------------------------------------
+
+{
+  "availableSeats": 90,
+  "flight": {
+    "carrierName": "Indigo",
+    "flightModel": "Jet",
+    "flightNumber": 10001,
+    "seatCapacity": 100
+  },
+  "schedule": {
+    "arrivalTime": "2022-10-28 16:10:00",
+    "departureTime": "2022-10-28 14:00:00",
+    "destinationAirport": {
+      "airportCode": "102",
+      "airportLocation": "Mumbai",
+      "airportName": "Chhatrapati Shivaji International Airport"
+    },
+    "sid": 101,
+    "sourceAirport": {
+      "airportCode": "103",
+      "airportLocation": "Bangalore",
+      "airportName": "Kempegowda International Airport"
+    }
+  },
+  "sfid": 101
+}
+
+------------------------------------------------------------------------------
+
+
+{
+  "availableSeats": 90,
+  "flight": {
+    "carrierName": "Spicejet",
+    "flightModel": "Airbus",
+    "flightNumber": 10002,
+    "seatCapacity": 120
+  },
+  "schedule": {
+    "arrivalTime": "2022-10-28 15:00:00",
+    "departureTime": "2022-10-28 14:00:00",
+    "destinationAirport": {
+      "airportCode": "102",
+      "airportLocation": "Mumbai",
+      "airportName": "Chhatrapati Shivaji International Airport"
+    },
+    "sid": 102,
+    "sourceAirport": {
+      "airportCode": "103",
+      "airportLocation": "Bangalore",
+      "airportName": "Kempegowda International Airport"
+    }
+  },
+  "sfid": 102
+}
+
+
+------------------------------------------------------------------------
+
+
+{
+  "availableSeats": 80,
+  "flight": {
+    "carrierName": "Indigo",
+    "flightModel": "Jet",
+    "flightNumber": 10001,
+    "seatCapacity": 100
+  },
+  "schedule": {
+    "arrivalTime": "2022-10-30 16:00:00",
+    "departureTime": "2022-10-30 14:00:00",
+    "destinationAirport": {
+      "airportCode": "105",
+      "airportLocation": "Hyderabad",
+      "airportName": "Rajiv Gandhi International Airport"
+    },
+    "sid": 103,
+    "sourceAirport": {
+      "airportCode": "102",
+      "airportLocation": "Mumbai",
+      "airportName": "Chhatrapati Shivaji International Airport"
+    }
+  },
+  "sfid": 103
+}
+
+
+==========================================================================
+
+
+
+RESPONSE 
+-------------------------
+
+{
+  "sfid": 100,
+  "flight": {
+    "flightNumber": 10004,
+    "carrierName": "AirGo",
+    "flightModel": "AGI",
+    "seatCapacity": 200
+  },
+  "schedule": {
+    "sid": 100,
+    "sourceAirport": {
+      "airportCode": "101",
+      "airportName": "Indira Gandhi International Airport",
+      "airportLocation": "Delhi"
+    },
+    "destinationAirport": {
+      "airportCode": "102",
+      "airportName": "Chhatrapati Shivaji International Airport",
+      "airportLocation": "Mumbai"
+    },
+    "arrivalTime": "2022-10-30 16:10:00",
+    "departureTime": "2022-10-30 14:00:00"
+  },
+  "availableSeats": 180
+}
+
+------------------------------------------------------------------
+{
+  "sfid": 101,
+  "flight": {
+    "flightNumber": 10005,
+    "carrierName": "GoFirst",
+    "flightModel": "GFI",
+    "seatCapacity": 180
+  },
+  "schedule": {
+    "sid": 101,
+    "sourceAirport": {
+      "airportCode": "101",
+      "airportName": "Indira Gandhi International Airport",
+      "airportLocation": "Delhi"
+    },
+    "destinationAirport": {
+      "airportCode": "102",
+      "airportName": "Chhatrapati Shivaji International Airport",
+      "airportLocation": "Mumbai"
+    },
+    "arrivalTime": "2022-10-30 11:15:00",
+    "departureTime": "2022-10-30 09:00:00"
+  },
+  "availableSeats": 180
+}
+
+
+--------------------------------------------------------------------
+
+
+{
+  "sfid": 103,
+  "flight": {
+    "flightNumber": 10002,
+    "carrierName": "Spicejet",
+    "flightModel": "Airbus",
+    "seatCapacity": 120
+  },
+  "schedule": {
+    "sid": 103,
+    "sourceAirport": {
+      "airportCode": "102",
+      "airportName": "Chhatrapati Shivaji International Airport",
+      "airportLocation": "Mumbai"
+    },
+    "destinationAirport": {
+      "airportCode": "105",
+      "airportName": "Rajiv Gandhi International Airport",
+      "airportLocation": "Hyderabad"
+    },
+    "arrivalTime": "2022-10-30 16:00:00",
+    "departureTime": "2022-10-30 14:00:00"
+  },
+  "availableSeats": 90
+}
+
+
+-----------------------------------------------------------------------------
+
+
+
+{
+    "sfid": 101,
+    "flight": {
+      "flightNumber": 10002,
+      "carrierName": "Spicejet",
+      "flightModel": "Airbus",
+      "seatCapacity": 120
+    },
+    "schedule": {
+      "sid": 102,
+      "sourceAirport": {
+        "airportCode": "103",
+        "airportName": "Kempegowda International Airport",
+        "airportLocation": "Bangalore"
+      },
+      "destinationAirport": {
+        "airportCode": "102",
+        "airportName": "Chhatrapati Shivaji International Airport",
+        "airportLocation": "Mumbai"
+      },
+      "arrivalTime": "2022-10-29 17:00:00",
+      "departureTime": "2022-10-29 15:00:00"
+    },
+    "availableSeats": 90
+  }
+
+
+--------
+{
+  "availableSeats": 80,
+  "flight": {
+    "carrierName": "Indigo",
+    "flightModel": "Jet",
+    "flightNumber": 10001,
+    "seatCapacity": 100
+  },
+  "schedule": {
+    "arrivalTime": "2022-11-03 16:00:00",
+    "departureTime": "2022-11-03 14:00:00",
+    "destinationAirport": {
+      "airportCode": "105",
+      "airportLocation": "Hyderabad",
+      "airportName": "Rajiv Gandhi International Airport"
+    },
+    "sid": 103,
+    "sourceAirport": {
+      "airportCode": "102",
+      "airportLocation": "Mumbai",
+      "airportName": "Chhatrapati Shivaji International Airport"
+    }
+  },
+  "sfid": 103
+}

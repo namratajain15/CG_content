@@ -1,0 +1,154 @@
+POSTMAN 
+-------------------------------
+-------------------------------
+
+//ADD SCHEDULED FLIGHT
+URI -- http://localhost:8081/api/scheduledflight/addSchFlight
+
+{
+  "availableSeats": 90,
+  "flight": {
+    "carrierName": "Indigo",
+    "flightModel": "Jet",
+    "flightNumber": 10003,
+    "seatCapacity": 100
+  },
+  "schedule": {
+    "arrivalTime": "2022-11-28T16:10:00",
+    "departureTime": "2022-11-28T14:00:00",
+    "destinationAirport": {
+      "airportCode": 102,
+      "airportLocation": "Mumbai",
+      "airportName": "Chhatrapati Shivaji International Airport"
+    },
+    "sid": 1,
+    "sourceAirport": {
+      "airportCode": 103,
+      "airportLocation": "Bangalore",
+      "airportName": "Kempegowda International Airport"
+    }
+  },
+  "sfid": 1
+}
+
+--------
+{
+  "availableSeats": 90,
+  "flight": {
+    "carrierName": "Air India",
+    "flightModel": "Jet",
+    "flightNumber": 10003,
+    "seatCapacity": 150
+  },
+  "schedule": {
+    "arrivalTime": "2022-11-28T16:10:00",
+    "departureTime": "2022-11-28T14:00:00",
+    "destinationAirport": {
+      "airportCode": 104,
+      "airportLocation": "Mumbai",
+      "airportName": "Chhatrapati Shivaji International Airport"
+    },
+    "sid": 1,
+    "sourceAirport": {
+      "airportCode": 101,
+      "airportLocation": "Delhi",
+      "airportName": "Indira Gandhi International Airport"
+    }
+  },
+  "sfid": 1
+}
+--------
+
+{
+  "availableSeats": 90,
+  "flight": {
+    "carrierName": "Indigo",
+    "flightModel": "Jet",
+    "flightNumber": 10001,
+    "seatCapacity": 100
+  },
+  "schedule": {
+    "arrivalTime": "2022-11-30T16:10:00",
+    "departureTime": "2022-11-30T14:00:00",
+    "destinationAirport": {
+      "airportCode": 102,
+      "airportLocation": "Mumbai",
+      "airportName": "Chhatrapati Shivaji International Airport"
+    },
+    "sid": 1,
+    "sourceAirport": {
+      "airportCode": 103,
+      "airportLocation": "Bangalore",
+      "airportName": "Kempegowda International Airport"
+    }
+  },
+  "sfid": 1
+}
+
+
+-------------------
+-------------------
+
+// SHOW BY FNO
+URI -- http://localhost:8081/api/scheduledflight/showByFno/{flightNumber}
+
+-------------------
+-------------------
+
+//SHOW ALL SCHEDULEDFLIGHTS
+URI -- http://localhost:8081/api/scheduledflight/showAllSchFlights
+
+--------------------
+--------------------
+
+//SHOW By AIRPORT AND DATE
+URI -- http://localhost:8081/api/scheduledflight/showByAirport/{src}/{dsc}/{date}
+
+--------------------
+--------------------
+
+//DELETE BY SFID
+URI -- http://localhost:8081/api/scheduledflight/deleteSchFlight/{sfid}
+
+---------------------
+---------------------
+
+//PATCH SCHFLIGHT
+URI -- http://localhost:8081/api/scheduledflight/patchSchFlight/{sfid}
+
+flightId : 10002
+availableSeats : 80
+
+-------------------
+-------------------
+
+//MODIFY SCH FLIGHT
+URI -- http://localhost:8081/api/scheduledflight/modifySchFlight/{sfid}
+
+{
+  "availableSeats": 80,
+  "flight": {
+    "carrierName": "Indigo",
+    "flightModel": "Jet",
+    "flightNumber": 10002,
+    "seatCapacity": 100
+  },
+  "schedule": {
+    "arrivalTime": "2022-11-29T15:10:00",
+    "departureTime": "2022-11-29T12:00:00",
+    "destinationAirport": {
+      "airportCode": 104,
+      "airportLocation": "Mumbai",
+      "airportName": "Chhatrapati Shivaji International Airport"
+    },
+    "sid": 103,
+    "sourceAirport": {
+      "airportCode": 101,
+      "airportLocation": "Bangalore",
+      "airportName": "Kempegowda International Airport"
+    }
+  },
+  "sfid": 100
+}
+
+

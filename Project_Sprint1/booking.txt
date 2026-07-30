@@ -1,0 +1,249 @@
+{
+  "bookingDate": "2022-10-28 00:00:00",
+  "bookingId": 1,
+  "flight": {
+    "availableSeats": 70,
+    "flight": {
+      "carrierName": "Indigo",
+      "flightModel": "Jet",
+      "flightNumber": 10001,
+      "seatCapacity": 100
+    },
+    "schedule": {
+      "arrivalTime": "2022-10-28 16:10:00",
+      "departureTime": "2022-10-28 14:10:00",
+      "destinationAirport": {
+        "airportCode": "102",
+        "airportLocation": "Mumbai",
+        "airportName": "Chhatrapati Shivaji International Airport"
+      },
+      "sid": 101,
+      "sourceAirport": {
+        "airportCode": "103",
+        "airportLocation": "Kempegowda International Airport",
+        "airportName": "Bangalore"
+      }
+    },
+    "sfid": 101
+  },
+  "noOfPassengers": 1,
+  "passengerList": [
+    {
+      "luggage": 12.0,
+      "passengerAge": 22,
+      "passengerName": "Hemant",
+      "passengerUIN": 123456789012,
+      "pnrNumber": 1
+    }
+  ],
+  "ticketCost": 123,
+  "user": {
+    "email": "ram@gmail.com",
+    "id": 11,
+    "userName": "Ram",
+    "userPassword": "ram",
+    "userPhone": 1234567890,
+    "userType": "admin"
+  }
+}
+
+
+
+
+
+
+{
+  "bookingDate": "2022-10-28 00:00:00",
+  "bookingId": 1,
+  "flight": {
+    "availableSeats": 70,
+    "flight": {
+      "carrierName": "Indigo",
+      "flightModel": "Jet",
+      "flightNumber": 10001,
+      "seatCapacity": 100
+    },
+    "schedule": {
+      "arrivalTime": "2022-10-28 16:10:00",
+      "departureTime": "2022-10-28 14:10:00",
+      "destinationAirport": {
+        "airportCode": "102",
+        "airportLocation": "Mumbai",
+        "airportName": "Chhatrapati Shivaji International Airport"
+      },
+      "sid": 101,
+      "sourceAirport": {
+        "airportCode": "103",
+        "airportLocation": "Kempegowda International Airport",
+        "airportName": "Bangalore"
+      }
+    },
+    "sfid": 101
+  },
+  "noOfPassengers": 4,
+  "passengerList": [
+{
+      "luggage": 10.0,
+      "passengerAge": 21,
+      "passengerName": "Namrata",
+      "passengerUIN": 123456789013,
+      "pnrNumber": 2
+    },
+{
+      "luggage": 10.0,
+      "passengerAge": 22,
+      "passengerName": "Simran",
+      "passengerUIN": 123456789014,
+      "pnrNumber": 3
+    },
+{
+      "luggage": 9.0,
+      "passengerAge": 21,
+      "passengerName": "Ishika",
+      "passengerUIN": 123456789015,
+      "pnrNumber": 4
+    },
+{
+      "luggage": 15.0,
+      "passengerAge": 24,
+      "passengerName": "Sahil",
+      "passengerUIN": 123456789016,
+      "pnrNumber": 5
+    }
+  ],
+  "ticketCost": 123,
+  "user": {
+    "email": "ram@gmail.com",
+    "id": 11,
+    "userName": "Ram",
+    "userPassword": "ram",
+    "userPhone": 1234567890,
+    "userType": "admin"
+  }
+}
+
+
+
+
+
+//update
+{
+  "bookingDate": "2022-10-28 00:00:00",
+  "bookingId": 1000,
+  "flight": {
+    "availableSeats": 70,
+    "flight": {
+      "carrierName": "Indigo",
+      "flightModel": "Jet",
+      "flightNumber": 10001,
+      "seatCapacity": 100
+    },
+    "schedule": {
+      "arrivalTime": "2022-10-28 16:10:00",
+      "departureTime": "2022-10-28 14:10:00",
+      "destinationAirport": {
+        "airportCode": "102",
+        "airportLocation": "Mumbai",
+        "airportName": "Chhatrapati Shivaji International Airport"
+      },
+      "sid": 101,
+      "sourceAirport": {
+        "airportCode": "103",
+        "airportLocation": "Kempegowda International Airport",
+        "airportName": "Bangalore"
+      }
+    },
+    "sfid": 101
+  },
+  "noOfPassengers": 4,
+  "passengerList": [
+{
+      "luggage": 10.0,
+      "passengerAge": 21,
+      "passengerName": "Namrata",
+      "passengerUIN": 123456789013,
+      "pnrNumber": 1051
+    },
+{
+      "luggage": 10.0,
+      "passengerAge": 22,
+      "passengerName": "Simran",
+      "passengerUIN": 123456789014,
+      "pnrNumber": 1052
+    },
+{
+      "luggage": 9.0,
+      "passengerAge": 21,
+      "passengerName": "Ishika",
+      "passengerUIN": 123456789015,
+      "pnrNumber": 1053
+    },
+{
+      "luggage": 10.0,
+      "passengerAge": 22,
+      "passengerName": "Sahil",
+      "passengerUIN": 123456789016,
+      "pnrNumber": 1054
+    }
+  ],
+  "ticketCost": 123,
+  "user": {
+    "email": "ram@gmail.com",
+    "id": 11,
+    "userName": "Ram",
+    "userPassword": "ram",
+    "userPhone": 1234567890,
+    "userType": "admin"
+  }
+}
+
+-----------
+
+{
+  "bookingDate": "2022-10-28 00:00:00",
+  "bookingId": 1,
+  "flight": {
+    "availableSeats": 80,
+    "flight": {
+      "carrierName": "Indigo",
+      "flightModel": "Jet",
+      "flightNumber": 10001,
+      "seatCapacity": 100
+    },
+    "schedule": {
+      "arrivalTime": "2022-11-03 16:00:00",
+    "departureTime": "2022-11-03 14:00:00",
+      "destinationAirport": {
+      "airportCode": "105",
+      "airportLocation": "Hyderabad",
+      "airportName": "Rajiv Gandhi International Airport"
+    },
+      "sid": 100,
+      "sourceAirport": {
+      "airportCode": "102",
+      "airportLocation": "Mumbai",
+      "airportName": "Chhatrapati Shivaji International Airport"
+    }
+    },
+    "sfid": 100
+  },
+  "noOfPassengers": 1,
+  "passengerList": [
+    {
+      "luggage": 12.0,
+      "passengerAge": 22,
+      "passengerName": "Hemant",
+      "passengerUIN": 123456789012,
+      "pnrNumber": 1
+    }
+  ],
+  "ticketCost": 123,
+  "user": {
+    "email": "ram@gmail.com",
+    "id": 11,
+    "userName": "Ram",
+    "userPassword": "ram",
+    "userPhone": 1234567890,
+    "userType": "admin"
+  }
+}
