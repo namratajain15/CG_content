@@ -1,0 +1,258 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Namrata}{Surana}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{R.T.D.C. Road, Lal Bagh, Nathdwara, Rajsamand, Rajasthan-313301, India }{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-23mm}
+
+\begin{center}
+\begin{tabular}{ c c c }
+\faEnvelopeO\enspace namratajain899@gmail.com \hspace{0.2cm} \faMobile\enspace +91 8290653618 \hspace{0.2cm} \href{https://github.com/namratajain15} {\faGithub\enspace namratajain15} \hspace{0.2cm} \href{https://www.linkedin.com/in/namrata-surana-50129b16b/} {\faLinkedin\enspace namrata-surana-50129b16b} \\ 
+\end{tabular}
+\end{center}
+
+ \section{SUMMARY}
+
+    Passionate Java-Kafka developer with 2 years of experience, specializing in designing and implementing data streaming applications. My expertise includes Java, Spring Boot, Oracle along with GitHub, JPA with Hibernate, Spring REST and Microservices. Looking for opportunities that enhance my knowledge and skills in development and also proficient in using various tools and technologies along with having ability to learn new technical information.
+
+\section{EDUCATION}
+{\customcventry{2018 - 2022}{B.Tech in Computer Science \hspace{0.5cm}\textbf{CGPA : 9.15}}{JECRC University, Jaipur}{Jaipur, India}{}{}}
+{\customcventry{2017 - 2018}{Senior Secondary (RBSE) \hspace{0.5cm}\textbf{Percentage : 86.60}}{Shree Jee Public Sr. Sec. School}{Nathdwara, India}{}{}}
+{\customcventry{2015 - 2016}{Secondary (RBSE) \hspace{0.5cm}\textbf{Percentage : 95.83}}{Shree Jee Public Sr. Sec. School}{Nathdwara, India}{}{}}
+
+
+\section{WORK EXPERIENCE}
+
+{\customcventry{\textbf{Sept 2022 - Present}}{\textbf{Senior Software Engineer} \hspace{0.5cm}\textbf{}}{CAPGEMINI}{Pune, India}{}{}}
+\vspace{\baselineskip}
+  {\begin{itemize}
+    \item Worked within Barclays account on data streaming application focused on designing starter template classes by providing specified configurations that simplify data streaming for tenants and managed by using Bitbucket.
+    \item Developed fully functional REST APIs and Microservice Application by using Spring Boot, Java, Oracle and integrated in MuleSoft as part of Mulesoft Training.
+    \item Developed Microservices Application by using messaging system as Apache Kafka and implemented the producer – consumer application using Spring Boot, Java and store the real-time data into database as part of Kafka Training.
+    \item Introduced Topic level monitoring in Kafka using Prometheus and Grafana. By employing Prometheus JMX Java agent, gathered metrics and created a Grafana dashboard for analysis and visualization.
+    \item Writing Junit test cases for different classes using Embedded Kafka for setting up Kafka environment within test cases.
+    \item Writing a Java, Kafka and Spring Boot based backend application for handling continuous flow of data and added filters by integrating API gateway i.e. Zuul Proxy.
+    \item Responsible for provisioning support for servers across various environments.
+
+  \end{itemize}
+  }
+
+\vspace{\baselineskip}
+
+{\customcventry{\textbf{Jan 2022 - May 2022}}{\textbf{Senior Analyst Trainee} \hspace{0.5cm}\textbf{}}{CAPGEMINI}{Pune, India}{}{}}
+\vspace{\baselineskip}
+{\begin{itemize}
+  \item Completed ADAPT training and learnt various technologies like Java, HTML, CSS, Javascript, RDBMS using Oracle, JDBC and Junit.
+\end{itemize}
+}
+
+
+
+
+
+\section{PROJECTS}
+{\customcvproject{FLIGHT MANAGEMENT SYSTEM}{\textbf{Sept 2022}}
+  {\begin{itemize}
+    \item The Flight Management System is a Java-based application used for booking flight tickets. It is developed as REST API web service using STS, synchronized using Git, integrated using Anypoint Studio, deployed on CloudHub, published as a public asset on AnyPoint Exchange. 
+    \item It combines information offered by many airlines and thus gives the user details and pricing in real-time. They can easily book, cancel, view, and change their bookings using this application.
+    \item \textbf{Tools/Technology: } Spring Tool Suite, Anypoint Studio, Postman, Java, Spring Boot, JPA with Hibernate,
+    \phantom{\textbf{Tools/Technology: }} H2 Database, MuleSoft
+    \item \textbf{My Contribution: } Create RAML specification for Scheduling Flights microservices. Configuring database
+    \phantom{\textbf{Tools/Technology: }} and writing queries to perform CRUD operations. Writing backend code in JAVA and \phantom{\textbf{Tools/Technology: }} the admin side components for Scheduling Flights.
+  \end{itemize}
+  }
+}
+\vspace{\baselineskip}
+{\customcvproject{WIKIMEDIASTREAM TO DATABASE}{\textbf{Feb 2023}}
+  {\begin{itemize}
+    \item This is the best use case to demonstrate the usage of Apache Kafka to deal with large amount of data.  
+    \item We create a Kafka producer to read a large amount of real time steam data from the Wikimedia. Then write the data to Kafka Broker and read the data by consumer to save it into database.
+    \item \textbf{Tools/Technology: } Command Prompt, Spring Tool Suite, PostgreSQL, Java, Spring Boot, Kafka.
+    \item \textbf{My Contribution: } Configured and implemented producer to send the data to topic and consumer to read \phantom{\textbf{My Contribution: }} data from the topic and PostgreSQL database to save the data into it.
+  \end{itemize}
+  }
+}
+
+\vspace{\baselineskip}
+{\customcvproject{GROCERY MART APPLICATION}{\textbf{May 2021}}
+  {\begin{itemize}
+    \item It is a 3 tier application development which gives a basic understanding of how the grocery system operates. 
+    \item It manages the products available in the mart, places the new order for customer and also keeps the track of customer's order details.
+    \item \textbf{Tools/Technology: } HTML, CSS, JavaScript, Python, Flask, MySql
+    \item \textbf{My Contribution: } Designing back-end part and manage database
+  \end{itemize}
+  }
+}
+
+{\customcvproject{ENGLISH-HINDI TRANSLATOR}{March 2021}
+  {\begin{itemize}
+    \item For a given statement, it is converting into hindi phrases by matching the rules. 
+    \item \textbf{Tools/Technology: } NLTK libraries, Python, Jupyter Notebook
+  \end{itemize}
+  }
+}
+
+{\customcvproject{MUSIC RECOMMENDATION MODEL}{June 2020}
+  {\begin{itemize}
+    \item It is used to increase the sale by recommending various music albums based on their profile. 
+    \item I have used Decision Tree Algorithm which is implemented in Scikit-learn library.
+    \item \textbf{Tools/Technology: } Scikit-learn library, Jupyter Notebook
+  \end{itemize}
+  }
+}
+
+
+\section{TECHNICAL SKILL}
+
+\textbf{Programming Languages }\hspace{0.4cm} C,C++,Python(BASIC),Java(BASIC)\\
+\textbf{Databases }\hspace{2.9cm} MySql\\
+\textbf{Relevant Courses }\hspace{1.7cm} Data Structures and Algorithms, DBMS, Operating System
+
+\section{ACHIEVEMENTS AND CO-CURRICULAR ACTIVITIES}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+    	\begin{itemize}
+          \item Earned \textbf{Silver Badges }in Problem Solving, MySql and Python on Hackerrank.
+          \item Secured \textbf{3rd} position in Secondary Examination at District level.
+          \item Volunteered and Participated in Technical Events in JU Rhythm
+          \item Worked as a member of Makerspace Community
+		\end{itemize}}%
+\end{minipage}%
+
+\section{CERTIFICATES}
+{\begin{itemize}
+    \item Online Machine Learning Training - \textbf{Internshala} \hspace{6.5cm}\textit{June 2020}
+    \item Problem Solving(Basic) - \textbf{HackerRank} \hspace{8.1cm}\textit{June 2021}
+ \end{itemize}
+  }
+  
+  \section{SOFT SKILLS}
+{\begin{itemize}
+    \item Hardworking, Detail Oriented, Teamwork, Problem Solving, Cooperative and Adaptive
+ \end{itemize}
+  }
+  
+
+
+    
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
